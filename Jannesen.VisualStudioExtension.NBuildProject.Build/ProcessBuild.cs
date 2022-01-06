@@ -75,13 +75,9 @@ namespace Jannesen.VisualStudioExtension.NBuildProject.Build
         {
             _loadConfig(FullFileName(ProcessBuildConfig), "processbuild-config");
 
-            if (_execProcess(_startInfo) != 0)
-                return false;
+            _execProcess(_startInfo);
 
-            if (this._errorCount > 0)
-                return false;
-
-            return true;
+            return (this._errorCount == 0);
         }
 
         private                 void                                _loadConfig(string configname, string rootname)
@@ -147,7 +143,7 @@ namespace Jannesen.VisualStudioExtension.NBuildProject.Build
                     reader.Dispose();
             }
         }
-        private                 int                                 _execProcess(ProcessStartInfo startInfo)
+        private                 void                                _execProcess(ProcessStartInfo startInfo)
         {
             try {
                 startInfo.WorkingDirectory       = ProjectDirectory;
@@ -186,7 +182,12 @@ namespace Jannesen.VisualStudioExtension.NBuildProject.Build
                         throw new BuildException("Async reader failed.", asyncReaderError.Result);
                 }
 
-                return process.ExitCode;
+                if (process.ExitCode != 0) {
+                    if (this._errorCount == 0) {
+                        ++this._errorCount;
+                        Log.LogError("Buildstep failed without error.");
+                    }
+                }
             }
             catch(Exception err) {
                 throw new BuildException("ExecProcess failed.", err);
