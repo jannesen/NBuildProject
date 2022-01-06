@@ -1,15 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
 	<Metadata>
-		<Identity Id="Jannesen.VisualStudioExtension.NBuildProject" Version="1.09.04.001" Language="en-US" Publisher="Jannesen B.V."/> <!-- @VERSIONINFO -->
+		<Identity Id="Jannesen.VisualStudioExtension.NBuildProject" Version="1.10.00.000" Language="en-US" Publisher="Jannesen B.V."/> <!-- @VERSIONINFO -->
 		<DisplayName>Custom Build project system</DisplayName>
 		<Description xml:space="preserve">Custom (Node) Build project system for Visual Studio 2019 (*.nbuildproj)</Description>
 		<Icon>NBuildProject.ico</Icon>
 	</Metadata>
 	<Installation AllUsers="true" >
-		<InstallationTarget Id="Microsoft.VisualStudio.Community"  Version="[16.5,17.0)" />
-		<InstallationTarget Id="Microsoft.VisualStudio.Pro"        Version="[16.5,17.0)" />
-		<InstallationTarget Id="Microsoft.VisualStudio.Enterprise" Version="[16.5,17.0)" />
+		<InstallationTarget Id="Microsoft.VisualStudio.Community"  Version="[17.0,18.0)" >
+      		<ProductArchitecture>amd64</ProductArchitecture>
+    	</InstallationTarget>
+		<InstallationTarget Id="Microsoft.VisualStudio.Pro"        Version="[17.0,18.0)" >
+      		<ProductArchitecture>amd64</ProductArchitecture>
+    	</InstallationTarget>
+		<InstallationTarget Id="Microsoft.VisualStudio.Enterprise" Version="[17.0,18.0)" >
+      		<ProductArchitecture>amd64</ProductArchitecture>
+    	</InstallationTarget>
 	</Installation>
 	<Dependencies>
 		<Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.7]" />
@@ -21,6 +27,6 @@
 		<Asset Type="Microsoft.VisualStudio.ItemTemplate"    d:Source="Project" d:ProjectName="Jannesen.VisualStudioExtension.NBuildProject.ItemTemplate"    d:TargetPath="|Jannesen.VisualStudioExtension.NBuildProject.ItemTemplate;TemplateProjectOutputGroup|"    Path="ItemTemplates"    d:VsixSubPath="ItemTemplates" />
 	</Assets>
   <Prerequisites>
-    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[16.0,17.0)" DisplayName="Visual Studio core editor" />
+    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,18.0)" DisplayName="Visual Studio core editor" />
   </Prerequisites>
 </PackageManifest>
