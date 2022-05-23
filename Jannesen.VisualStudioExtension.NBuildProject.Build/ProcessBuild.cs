@@ -109,9 +109,24 @@ namespace Jannesen.VisualStudioExtension.NBuildProject.Build
                                 }
                                 else {
                                     switch(name) {
-                                    case "filename":            _startInfo.FileName         = value;    break;
-                                    case "workingdirectory":    _startInfo.WorkingDirectory = value;    break;
-                                    case "arguments":           _startInfo.Arguments        = value;    break;
+                                    case "filename":
+                                        if (!File.Exists(value)) {
+                                            throw new Exception("process.filename '" + value + "' don't exists.");
+                                        }
+                                        _startInfo.FileName = value;
+                                        break;
+
+                                    case "workingdirectory":
+                                        if (!Directory.Exists(value)) {
+                                            throw new Exception("process.workingdirectory '" + value + "' don't exists.");
+                                        }
+                                        _startInfo.WorkingDirectory = value;
+                                        break;
+
+                                    case "arguments":
+                                        _startInfo.Arguments = value;
+                                        break;
+
                                     default:
                                         throw new Exception("Unknown process property '" + name + "'.");
                                     }

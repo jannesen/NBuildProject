@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.ProjectSystem;
 using Microsoft.VisualStudio.ProjectSystem.Properties;
 
-namespace Jannesen.VisualStudioExtension.NBuildProject.VSIX
+namespace Jannesen.VisualStudioExtension.NBuildProject.CPS
 {
     [Export]
-    internal partial class ProjectProperties : StronglyTypedPropertyAccess
+    public partial class ProjectProperties: StronglyTypedPropertyAccess
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ProjectProperties"/> class.

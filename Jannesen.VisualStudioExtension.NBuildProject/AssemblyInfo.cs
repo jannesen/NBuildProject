@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
-using Jannesen.VisualStudioExtension.NBuildProject.VSIX;
+using Jannesen.VisualStudioExtension.NBuildProject;
 
 [assembly: AssemblyTitle            ("Jannesen.VisualStudioExtension.NBuildProject")]
 [assembly: AssemblyDescription      ("Jannesen Visual Studio extensions NBuildProject")]

@@ -3,16 +3,16 @@ using System.ComponentModel.Composition;
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.ProjectSystem;
 
-namespace Jannesen.VisualStudioExtension.NBuildProject.VSIX.CPS
+namespace Jannesen.VisualStudioExtension.NBuildProject.CPS
 {
     [Export]
     [AppliesTo(NBuildProjectUnconfiguredProject.UniqueCapability)]
     internal class NBuildProjectConfiguredProject
     {
-        [Import, SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
+        [Import]
         internal        ConfiguredProject       ConfiguredProject   { get; private set; }
 
-        [Import, SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
+        [Import]
         internal        ProjectProperties       Properties          { get; private set; }
 
         public                                  NBuildProjectConfiguredProject()
