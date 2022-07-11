@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Rule Name="DebuggerProject"
+      DisplayName="Start"
+      PageTemplate="debugger"
+      Description="NBuild lanch options"
+      xmlns="http://schemas.microsoft.com/build/2009/properties">
+
+    <Rule.DataSource>
+        <DataSource Persistence="ProjectFile" HasConfigurationCondition="False"/>
+    </Rule.DataSource>
+
+    <StringProperty Name="LanchCwd"
+                    Visible="true"
+                    DisplayName="Work directory"
+                    Description="Work directory"/>
+
+    <StringProperty Name="LanchExec"
+                    Visible="true"
+                    DisplayName="Executable"
+                    Description="Executable"/>
+
+    <StringProperty Name="LanchArgs"
+                    Visible="true"
+                    DisplayName="Arguments"
+                    Description="Arguments"/>
+
+    <StringProperty Name="LanchEnv"
+                    Visible="true"
+                    DisplayName="Environment variable"
+                    Description="Environment variable">
+    </StringProperty>
+    
+    <StringProperty Name="LanchSourceMaps"
+                    Visible="true"
+                    DisplayName="Source maps"
+                    Description="Source maps">
+    </StringProperty>
+
+    <StringProperty Name="LanchUserArgs"
+                    Visible="true"
+                    DisplayName="User arguments"
+                    Description="User arguments.">
+        <StringProperty.DataSource>
+            <DataSource Persistence="UserFile" HasConfigurationCondition="False"/>
+        </StringProperty.DataSource>
+    </StringProperty>
+</Rule>

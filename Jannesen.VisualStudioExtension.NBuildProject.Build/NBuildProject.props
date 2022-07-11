@@ -6,8 +6,9 @@
 		<Configuration Condition="'$(Configuration)'==''">Release</Configuration>
 		<Platform Condition="'$(Platform)'==''">AnyCPU</Platform>
 		<TargetFramework Condition="'$(TargetFramework)'==''">net</TargetFramework>
-	</PropertyGroup>
+        <DebuggerFlavor Condition="'$(DebuggerFlavor)'==''">DebuggerProject</DebuggerFlavor>
+    </PropertyGroup>
 
-	<PropertyGroup Condition="'$(Configuration)'=='Debug'" Label="Configuration" />
-	<PropertyGroup Condition="'$(Configuration)'=='Release'" Label="Configuration"/>
+    <PropertyGroup Condition="'$(Configuration)'=='Debug'" Label="Configuration" />
+    <PropertyGroup Condition="'$(Configuration)'=='Release'" Label="Configuration"/>
 </Project>

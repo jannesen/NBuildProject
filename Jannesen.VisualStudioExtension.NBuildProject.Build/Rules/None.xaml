@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Rule
-    Name="None"
-    DisplayName="General"
-    PageTemplate="generic"
-    Description="Non-build items"
-    xmlns="http://schemas.microsoft.com/build/2009/properties">
+<Rule Name="None"
+      DisplayName="General"
+      PageTemplate="generic"
+      Description="Non-build items"
+      xmlns="http://schemas.microsoft.com/build/2009/properties">
 
     <Rule.DataSource>
         <DataSource Persistence="ProjectFile" HasConfigurationCondition="False" ItemType="None" />

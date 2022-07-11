@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Rule Name="DebuggerProject"
+      DisplayName="Start"
+      PageTemplate="debugger"
+      Description="NBuild lanch options"
+      xmlns="http://schemas.microsoft.com/build/2009/properties">
+
+    <Rule.DataSource>
+        <DataSource Persistence="ProjectFile" HasConfigurationCondition="False"/>
+    </Rule.DataSource>
+
+    <StringProperty Name="LanchArgs"
+                    Visible="true"
+                    DisplayName="Arguments"
+                    Description="Arguments"/>
+
+    <StringProperty Name="LanchBrowserDataDir"
+                    Visible="true"
+                    DisplayName="Browser datadir"
+                    Description="Browser datadir"/>
+
+    <StringProperty Name="LanchWebRoot"
+                    Visible="true"
+                    DisplayName="Web root"
+                    Description="Web root">
+    </StringProperty>
+
+    <StringProperty Name="LanchUserUrl"
+                    Visible="true"
+                    DisplayName="URL"
+                    Description="Url for chrome/edge debugging.">
+        <StringProperty.DataSource>
+            <DataSource Persistence="UserFile" HasConfigurationCondition="False"/>
+        </StringProperty.DataSource>
+    </StringProperty>
+</Rule>

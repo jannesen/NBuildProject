@@ -34,8 +34,9 @@ namespace Jannesen.VisualStudioExtension.NBuildProject.Build.Library
                 rtn = false;
             }
 
-            if (!rtn)
+            if (!rtn) { 
                 System.Threading.Thread.Sleep(50); // Work around bug in Visual studio where output is missing.
+            }
 
             return rtn;
         }

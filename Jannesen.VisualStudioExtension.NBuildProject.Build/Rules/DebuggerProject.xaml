@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Rule
-	Name="DebuggerProject"
-	DisplayName="Start"
-	PageTemplate="debugger"
-	Description="NBuild lanch options"
-	xmlns="http://schemas.microsoft.com/build/2009/properties">
-</Rule>

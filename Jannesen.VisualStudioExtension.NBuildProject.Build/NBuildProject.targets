@@ -22,17 +22,21 @@
         <PropertyPageSchema Include="$(MSBuildThisFileDirectory)Rules\User.xaml">
             <Context>Project</Context>
         </PropertyPageSchema>
-        <PropertyPageSchema Include="$(MSBuildThisFileDirectory)Rules\DebuggerProject.xaml">
+        <PropertyPageSchema Include="$(MSBuildThisFileDirectory)Rules\DebuggerGeneral.xaml">
+            <Context>Project</Context>
+        </PropertyPageSchema>
+        <PropertyPageSchema Condition="'$(LanchType)'=='node'"  Include="$(MSBuildThisFileDirectory)Rules\DebuggerProjectNode.xaml">
+            <Context>Project</Context>
+        </PropertyPageSchema>
+        <PropertyPageSchema Condition="'$(LanchType)'=='chrome'" Include="$(MSBuildThisFileDirectory)Rules\DebuggerProjectBrowser.xaml">
+            <Context>Project</Context>
+        </PropertyPageSchema>
+        <PropertyPageSchema Condition="'$(LanchType)'=='edge'"   Include="$(MSBuildThisFileDirectory)Rules\DebuggerProjectBrowser.xaml">
             <Context>Project</Context>
         </PropertyPageSchema>
 
         <PropertyPageSchema Include="$(MSBuildThisFileDirectory)Rules\GeneralBrowseobject.xaml">
 			<Context>BrowseObject</Context>
-		</PropertyPageSchema>
-
-		<!-- SCC -->
-		<PropertyPageSchema Include="$(MSBuildThisFileDirectory)Rules\Scc.xaml">
-			<Context>Invisible</Context>
 		</PropertyPageSchema>
 	</ItemGroup>
 

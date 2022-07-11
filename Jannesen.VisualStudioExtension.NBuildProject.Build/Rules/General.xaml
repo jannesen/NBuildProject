@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Rule
-    Name="ConfigurationGeneral"
-    DisplayName="General"
-    PageTemplate="generic"
-    Description="General"
-    xmlns="http://schemas.microsoft.com/build/2009/properties">
+<Rule Name="ConfigurationGeneral"
+      DisplayName="General"
+      PageTemplate="generic"
+      Description="General"
+      xmlns="http://schemas.microsoft.com/build/2009/properties">
 
     <Rule.Categories>
         <Category Name="General" DisplayName="General" Description="General" />
@@ -14,12 +13,30 @@
         <DataSource Persistence="ProjectFile" Label="Configuration"  HasConfigurationCondition="False" />
     </Rule.DataSource>
 
-    <StringProperty Name="NBuildProjectBuild" Visible="False" />
-    <StringProperty Name="ProjectGuid" Visible="False">
+    <StringProperty Name="ProjectGuid" Visible="false">
         <StringProperty.DataSource>
             <DataSource Persistence="ProjectFile" Label="Globals" HasConfigurationCondition="False" />
         </StringProperty.DataSource>
     </StringProperty>
 
-    <StringProperty Name="BuildJSDirectory"         Visible="true" Description="Directory where to find build-tool." />
+    <StringProperty Name="NBuildProjectBuild"
+                    Visible="false" />
+    
+    <StringProperty Name="BuildJSDirectory"
+                    Visible="false"
+                    Description="Directory where to find build-tool" />
+    
+    <StringProperty Name="TargetDirectory"
+                    Visible="true"
+                    DisplayName="Target directory"
+                    Description="Target directory" />
+
+    <EnumProperty Name="LanchType"
+                  Visible="true"
+                  DisplayName="Lanch"
+                  Description="Lanch Type.">
+        <EnumValue Name="node"   DisplayName="NodeJS"         Description="Run nodejs." />
+        <EnumValue Name="chrome" DisplayName="Chrome browser" Description="Run chrome browser." />
+        <EnumValue Name="edge"   DisplayName="Edge browser"   Description="Run edge browser." />
+    </EnumProperty>
 </Rule>
