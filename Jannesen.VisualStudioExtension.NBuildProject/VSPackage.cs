@@ -13,7 +13,7 @@ namespace Jannesen.VisualStudioExtension.NBuildProject
     public sealed class VSPackage: AsyncPackage
     {
         public      const       string                              PackageGuidString   = "24077884-E16E-4CC2-937F-7CA74CCE53AE";
-        public      const       string                              Version             = "1.10.01.000";        //@VERSIONINFO
+        public      const       string                              Version             = "1.10.02.000";        //@VERSIONINFO
 
         public                                                      VSPackage()
         {
