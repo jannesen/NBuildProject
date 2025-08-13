@@ -38,22 +38,22 @@ namespace Jannesen.VisualStudioExtension.NBuildProject.CPS
         }
 
         [Import]
-        internal            UnconfiguredProject                                     UnconfiguredProject { get; }
+        internal            UnconfiguredProject                                     UnconfiguredProject         { get; private set; }
 
         [Import]
-        internal            IActiveConfiguredProjectSubscriptionService             SubscriptionService { get; }
+        internal            IActiveConfiguredProjectSubscriptionService             SubscriptionService         { get; private set; }
 
         [Import]
-        internal            IProjectThreadingService                                ThreadHandling { get; }
+        internal            IProjectThreadingService                                ThreadHandling              { get; private set; }
 
         [Import]
-        internal            ActiveConfiguredProject<ConfiguredProject>              ActiveConfiguredProject { get; }
+        internal            ActiveConfiguredProject<ConfiguredProject>              ActiveConfiguredProject     { get; private set; }
 
         [Import]
-        internal            ActiveConfiguredProject<NBuildProjectConfiguredProject> MyActiveConfiguredProject { get; }
+        internal            ActiveConfiguredProject<NBuildProjectConfiguredProject> MyActiveConfiguredProject   { get; private set; }
 
         [ImportMany(ExportContractNames.VsTypes.IVsProject, typeof(IVsProject))]
-        internal            OrderPrecedenceImportCollection<IVsHierarchy>           ProjectHierarchies { get; }
+        internal            OrderPrecedenceImportCollection<IVsHierarchy>           ProjectHierarchies          { get; private set; }
 
         internal            IVsHierarchy                                            ProjectHierarchy
         {
