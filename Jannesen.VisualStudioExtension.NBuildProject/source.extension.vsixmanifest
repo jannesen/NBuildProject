@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="Jannesen.VisualStudioExtension.NBuildProject" Version="1.10.02.000" Language="en-US" Publisher="Jannesen B.V."/> <!-- @VERSIONINFO -->
+        <Identity Id="Jannesen.VisualStudioExtension.NBuildProject" Version="|%CurrentProject%;GetVsixVersion|" Language="en-US" Publisher="Jannesen B.V."/>
         <DisplayName>Custom Build project system</DisplayName>
         <Description>Custom (Node) Build project system for Visual Studio 2022 (*.nbuildproj)</Description>
         <Icon>NBuildProject.ico</Icon>
