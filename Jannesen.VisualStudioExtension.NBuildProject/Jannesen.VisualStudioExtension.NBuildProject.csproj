@@ -26,9 +26,9 @@
 		<Reference Include="System.ComponentModel.Composition" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Microsoft.VSSDK.BuildTools"					Version="17.14.2120"						     />
-		<PackageReference Include="Microsoft.VisualStudio.ProjectSystem.Sdk"	Version="17.9.380"		ExcludeAssets="runtime" />
-        <PackageReference Include="Microsoft.VisualStudio.Shell.15.0"			Version="17.13.40008"	ExcludeAssets="runtime" />
+		<PackageReference Include="Microsoft.VSSDK.BuildTools"					Version="18.0.136-preview1"		ExcludeAssets="runtime"	/>
+		<PackageReference Include="Microsoft.VisualStudio.ProjectSystem.Sdk"	Version="18.0.221-pre"			ExcludeAssets="runtime" />
+        <PackageReference Include="Microsoft.VisualStudio.Shell.15.0"			Version="18.0.1755-preview.1"	ExcludeAssets="runtime" />
     </ItemGroup>
 
 	<ItemGroup>
@@ -66,7 +66,7 @@
 	</ItemGroup>
 
 	<Import Sdk="Microsoft.NET.Sdk" Project="Sdk.targets" />
-	<Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" />
+	<Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="Exists('$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets')" />
     
 	<!-- Code to get version in correct places -->
     <ItemGroup>

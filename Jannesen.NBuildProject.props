@@ -1,6 +1,6 @@
 <Project>
 	<PropertyGroup>
-		<NBuildProjVersion>1.10.03.001</NBuildProjVersion>	<!-- @VERSIONINFO -->
+		<NBuildProjVersion>1.20.00.000</NBuildProjVersion>	<!-- @VERSIONINFO -->
 
 		<!-- TargetFramework -->
 		<TargetFramework>net472</TargetFramework>
