@@ -10,7 +10,6 @@
 		<TargetVsixContainerName>Jannesen.NBuildProject.vsix</TargetVsixContainerName>
 		<TargetVsixContainer>$(MSBuildThisFileDirectory)..\$(TargetVsixContainerName)</TargetVsixContainer>
 		<UseCodebase>true</UseCodebase>
-		<IncludeCopyLocalReferencesInVSIXContainer>true</IncludeCopyLocalReferencesInVSIXContainer>
 		
 		<GeneratedVSPackageVersionFile>$(MSBuildThisFileDirectory)obj\Generated-VSPackage.Version.cs</GeneratedVSPackageVersionFile>
 	</PropertyGroup>
