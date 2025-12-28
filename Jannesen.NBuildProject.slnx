@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+    <File Path="Jannesen.NBuildProject.props" />
+    <File Path="LICENSE.txt" />
+    <File Path="NBuildProject.cmd" />
+    <File Path="README.md" />
+    <File Path="VSExp-Clean.cmd" />
+  </Folder>
+  <Project Path="Jannesen.VisualStudioExtension.NBuildProject.Build/Jannesen.VisualStudioExtension.NBuildProject.Build.csproj" />
+  <Project Path="Jannesen.VisualStudioExtension.NBuildProject.ItemTemplate/Jannesen.VisualStudioExtension.NBuildProject.ItemTemplate.csproj" />
+  <Project Path="Jannesen.VisualStudioExtension.NBuildProject.ProjectTemplate/Jannesen.VisualStudioExtension.NBuildProject.ProjectTemplate.csproj" />
+  <Project Path="Jannesen.VisualStudioExtension.NBuildProject/Jannesen.VisualStudioExtension.NBuildProject.csproj" />
+</Solution>
